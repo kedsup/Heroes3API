@@ -50,10 +50,10 @@ def _get_basic_stats(tds) -> dict:
     return {
         'name': name,
         'attack': attack,
-        'defense': defence,
-        'hp': health,
-        'min_dmg': min_damage,
-        'max_dmg': max_damage,
+        'defence': defence,
+        'health': health,
+        'min_damage': min_damage,
+        'max_damage': max_damage,
         'speed': speed
     }
 
@@ -117,7 +117,7 @@ def _convert_to_int_lvl(lvl_text: Optional[str]) -> Tuple[int, int]:
     return base_lvl, upgrade_lvl
 
 
-def _get_resources_cost(resources_cost_td) -> Optional[Tuple[str, int]]:
+def _get_resources_cost(resources_cost_td) -> Optional[str]:
     """Converts resources text into resource:str and resources_cost:int"""
     if not resources_cost_td:
         return None
@@ -128,6 +128,8 @@ def _get_resources_cost(resources_cost_td) -> Optional[Tuple[str, int]]:
         resources_cost = res.group()
         resource = resources_cost_td.find('a').get('title')
 
+    #resources_cost_dict = "{}: {}".format(resource, resources_cost) if resource else None
+    # print(resources_cost_dict)
     resources_cost_dict = {resource: resources_cost} if resource else None
 
     return resources_cost_dict

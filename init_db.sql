@@ -8,13 +8,13 @@ CREATE TABLE IF NOT EXISTS units (
     defence INTEGER NOT NULL,
     min_damage INTEGER NOT NULL,
     max_damage INTEGER NOT NULL,
-    ammo INTEGER NOT NULL,
+    ammo INTEGER,
     health INTEGER NOT NULL,
     speed INTEGER NOT NULL,
     growth INTEGER NOT NULL,
     ai_value INTEGER NOT NULL,
     cost INTEGER NOT NULL,
-    resources_cost VARCHAR (64) NOT NULL
+    resources_cost VARCHAR (64)
 );
 
 CREATE TABLE IF NOT EXISTS specials (
