@@ -6,7 +6,6 @@ from psycopg2 import sql
 from config import dsn
 from models.unit import Unit
 
-print(str(dsn))
 conn = psycopg2.connect(**dsn)
 
 cursor = conn.cursor()

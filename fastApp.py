@@ -18,5 +18,5 @@ def read_unit_info(name: str = Query()):
 def read_stack_info(name: str = Query(), size: int = Query(default=1)):
     """Returns response json with stack of units info"""
     if size <= 0:
-        raise HTTPException(status_code=400, detail="Size must be greater than there")
+        raise HTTPException(status_code=400, detail="Size must be greater than zero")
     return api.calculate_stack(name, size)

@@ -16,10 +16,10 @@ def main():
         unit_model = Unit(**unit)
         add_unit(unit_model)
 
-    # print(get_unit_by_name('Azure Dragon'))
-    # json_azure_dragon = json.dumps(name_unit['azure_dragon'], indent=4)
-    # unit = Unit.parse_raw(json_azure_dragon)
-    # print(unit.json())
+    print(get_unit_by_name('Azure Dragon'))
+    json_azure_dragon = json.dumps(name_unit['azure_dragon'], indent=4)
+    unit = Unit.parse_raw(json_azure_dragon)
+    print(unit.json())
 
 
 if __name__ == '__main__':
